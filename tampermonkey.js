@@ -3,12 +3,16 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.1
 // @description  Google Analytics for super users
-// @author       You
+// @author       Conversionista!
 // @match        https://analytics.google.com/*
 // @grant        none
 // ==/UserScript==
 // @require http://code.jquery.com/jquery-latest.js
 
+// ==OpenUserJS==
+// @author conversionista
+// @collaborator simondahla hooga
+// ==/OpenUserJS==
 
 
 (function() {
