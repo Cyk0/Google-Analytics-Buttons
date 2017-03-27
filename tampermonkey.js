@@ -6,12 +6,12 @@
 // @author       Conversionista!
 // @match        https://analytics.google.com/*
 // @grant        none
-// ==/UserScript==
 // @require http://code.jquery.com/jquery-latest.js
-
+// @updateURL https://openuserjs.org/meta/conversionista/Google_Analytics_Buttons.meta.js
+// ==/UserScript==
 // ==OpenUserJS==
 // @author conversionista
-// @collaborator simondahla hooga
+// @collaborator simondahla
 // ==/OpenUserJS==
 
 
