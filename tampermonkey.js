@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Google Analytics UI Addons
+// @name         Google Analytics Buttons
 // @namespace    http://tampermonkey.net/
 // @version      1.2
 // @description  Google Analytics for super users
