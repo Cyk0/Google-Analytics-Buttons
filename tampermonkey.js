@@ -14,10 +14,6 @@
 // @collaborator simondahla
 // ==/OpenUserJS==
 
-
-
-
-
 (function() {
     'use strict';
 
