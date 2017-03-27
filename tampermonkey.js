@@ -15,11 +15,27 @@
 // ==/OpenUserJS==
 
 
+
+
+
 (function() {
     'use strict';
 
     // Your code here...
-    
+    // allow jQuery regex selectors
+jQuery.expr[':'].regex = function(elem, index, match) {
+    var matchParams = match[3].split(','),
+        validLabels = /^(data|css):/,
+        attr = {
+            method: matchParams[0].match(validLabels) ?
+                        matchParams[0].split(':')[0] : 'attr',
+            property: matchParams.shift().replace(validLabels,'')
+        },
+        regexFlags = 'ig',
+        regex = new RegExp(matchParams.join('').replace(/^\s+|\s+$/g,''), regexFlags);
+    return regex.test(jQuery(elem)[attr.method](attr.property));
+};
+
 
     // ***** GA Buttons *****
 
@@ -40,28 +56,26 @@
 
         if (btn === "Page") {
             clickDim(nr);
-            setTimeout(function() {
-                 $('div[class*="ID-concept"][class*="request_uri"]')[2].click();
-                 console.log($('div[class*="ID-concept"][class*="request_uri"]'))
-            }, 50);
+            $("div:regex(class, .*request_uri._)").click();
+          
 
 
         }
 
         if (btn === "Mobile") {
             clickDim(nr);
-            $("div.ID-concept-8-17").click();
+            $('div[class*="ID-concept"][class*="device_category"]').click();
             setTimeout(function() {
                 $('div[class*="condition"] input._GApRb').eq(nr).val("mobile");
-            }, 50);
+            }, 10);
 
         }
         if (btn === "Desktop") {
             clickDim(nr);
-            $("div.ID-concept-8-17").click();
+            $('div[class*="ID-concept"][class*="device_category"]').click();
             setTimeout(function() {
                 $('div[class*="condition"] input._GApRb').eq(nr).val("desktop");
-            }, 50);
+            }, 10);
 
         }
 
