@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Google Analytics Buttons
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Google Analytics for super users
 // @author       Conversionista!
 // @match        https://analytics.google.com/*
@@ -57,7 +57,6 @@ jQuery.expr[':'].regex = function(elem, index, match) {
         if (btn === "Page") {
             clickDim(nr);
             $("div:regex(class, .*request_uri._)").click();
-          
 
 
         }
