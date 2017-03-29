@@ -234,5 +234,5 @@ jQuery.expr[':'].regex = function(elem, index, match) {
 
     }, 2000);
 
-        //console.log("big foot exists");
+        //console.log("big foot does not exist");
 })();
